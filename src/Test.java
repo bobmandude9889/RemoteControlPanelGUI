@@ -6,12 +6,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import player.Player;
+import player.PlayerManager;
 
 public class Test extends JFrame {
 
 	public static void main(String[] args) {
 		String name = JOptionPane.showInputDialog("Enter a name:");
-		Player player = new Player(name);
+		Player player = PlayerManager.getPlayer(name);
 		new Test(player);
 	}
 
